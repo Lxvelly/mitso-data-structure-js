@@ -13,7 +13,7 @@ const { NotImplementedError } = require("../extensions/index.js");
  *
  */
 module.exports = class Stack {
-  #array = [];
+  #array = []; // создание массива элементов в стеке
 
   push(element) {
     return this.#array.push(element);
