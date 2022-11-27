@@ -32,9 +32,14 @@ module.exports = class BinarySearchTree {
     // remove line with error and write your code here
   }
 
-  find(/* data */) {
-    throw new NotImplementedError("Not implemented");
-    // remove line with error and write your code here
+  find(data) {
+    let node = this.node;
+    while (node) {
+      if (data === node.data) return node;
+      node = data < node.data ? node.left : node.right;
+    };
+
+    return null;
   }
 
   remove(/* data */) {
