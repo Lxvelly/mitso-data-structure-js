@@ -54,7 +54,9 @@ module.exports = class BinarySearchTree {
   }
 
   max() {
-    throw new NotImplementedError("Not implemented");
-    // remove line with error and write your code here
+    let node = this.node;
+    while (node.right) node = node.right;
+
+    return node.data;
   }
 };
